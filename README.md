@@ -1,19 +1,19 @@
-# I2P(I) 2020 Hu
+## I2P(I) 2020 Hu
 Here are the files about the problems I prepare the for NTHU course: Introduction to Programming (I).
 
-## generator
+### generator
 The file `gen.cpp` is to generate the testcases for the problem-judging.
 
-## images
+### images
 Here are all the images used in the problem statement.
 
-## solutions
+### solutions
 - the file with prefix "sol" is an AC solution for the problem
 - ths file with prefix "subtask" is a solution for the problem's subtask
 - otherwise the file is a fake solution for testing
 
-## tests
+### tests
 Here stores all the testcases.
 
-## validator
+### validator
 The file `val.cpp` is to check whether the format of every `.in` testcase is correct or not. 
