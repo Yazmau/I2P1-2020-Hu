@@ -1,6 +1,9 @@
 ### generator
 The file `gen.cpp` is to generate the testcases for the problem-judging.
 
+### images
+Here are all the images used in the problem statement.
+
 ### solutions
 - the file with prefix "sol" is an AC solution for the problem
 - ths file with prefix "subtask" is a solution for the problem's subtask
