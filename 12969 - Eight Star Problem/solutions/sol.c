@@ -1,0 +1,34 @@
+// solution by Yazmau
+#include<stdio.h>
+#define maxn 15
+#define INF 12345678912345ll
+int arr[maxn][maxn];
+int col[maxn],mdig[maxn<<1],adig[maxn<<1];
+long long sol(int i,int n,long long sum) {
+	if(i == n)
+		return sum;
+	else {
+		long long ret = -INF;
+		for(int j=0;j<n;j++)
+			if(!col[j] && !mdig[i + j] && !adig[i - j + maxn]) {
+				col[j] = mdig[i + j] = adig[i - j + maxn] = 1;
+				long long now = sol(i + 1,n,sum + arr[i][j]);
+				if(now > ret)	ret = now;
+				col[j] = mdig[i + j] = adig[i - j + maxn] = 0;
+			}
+		return ret;
+	}
+}
+int main() {
+	int n;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)
+		for(int j=0;j<n;j++)
+			scanf("%d",&arr[i][j]);
+	long long ans = sol(0,n,0);
+	if(ans == -INF)
+		printf("no solution\n");
+	else
+		printf("%lld\n",ans);
+	return 0;
+}
